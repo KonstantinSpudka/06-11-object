@@ -26,16 +26,109 @@
 // // Читання властивостей
 // console.log("user :>> ", user.email);
 
-// // Видалення властивостей
-// delete user.password;
+// // // Видалення властивостей
+// // delete user.password;
+// // console.log("user :>> ", user);
+
+// // // Створити об'єкт машини (марка, модель, год, номер, цвет)
+// // // Просмотреть об'єкт
+// // // Изменить колір
+// // // удалити св-во год випуска
+// // // Добавити св-во ім'я/призвище влсника
+// // // продивитися об'єкт
+
+// // const car = {
+// //   mark: "Mersedes",
+// //   model: "Brabus",
+// //   year: 2022, // без лапок це цифри
+// //   number: "007",
+// //   color: "white",
+// // };
+// // console.log("car do:>> ", car);
+
+// // // Зміна значення властивості
+// // car.color = "black";
+// // console.log("car after:>> ", car);
+
+// // delete car.year;
+// // console.log("car :>> ", car);
+
+// // car.name = "Bogdan";
+// // car.surname = "Hmelnickiy";
+// // console.log("car :>> ", car);
+
+// // /* Типи посилання і типи значення*/
+// // const a = 5;
+// // const b = 5;
+// // console.log("a===b :>> ", a === b);
+
+// // const o1 = {};
+// // const o2 = {};
+// // console.log("o1===o2 :>> ", o1 === o2);
+
+// // const o3 = o1;
+// // console.log("o1===o3 :>> ", o1 === o3);
+// // o3.name = "property";
+// // console.log("o1 :>> ", o1);
+
+// // function f() {
+// //   o3.lastName = 1;
+// // }
+
+// // f(o3);
+// // console.log("o3 :>> ", o3);
+
+// // /* Копіювання об'єкту чогось в об'єкт*/
+// // const user1 = Object.assign({}, user);
+// // console.log("user1 :>> ", user1);
+// // console.log("user === user1 :>> ", user === user1);
+
+// // /* Копіювання об'єкту №2 - спрощенний*/
+// // const user2 = { ...user };
+// // console.log("user2 :>> ", user2);
+// // console.log("user === user2 :>> ", user === user2);
+
+// /* */
+// // const prop = prompt("input property");
+// // const value = prompt("input value");
+
+// // const obj = {
+// //   [prop]: value,
+// // };
+// // console.log("obj :>> ", obj);
+
+// const user = {
+//   // key:value,
+//   firstName: "Test",
+//   lastName: "Testovich",
+//   email: "test@imail.com",
+//   password: "qwert",
+//   // методи
+//   // this той, об'єкт, що стоїть перед крапкою при виклику метода
+//   getFullName: function () {
+//     // console.log("this :>> ", this === user);
+//     // console.log("Hello from function");
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   // changeEmail: function (newEmail) {
+//   //   this.email = newEmail;
+//   // },
+//   //2
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   },
+// };
+
+// // function getFullName(user1) {
+// //   return `${user1.firstName} ${user1.lastName}`;
+// // }
+
+// // console.log("getFullName(user) :>> ", getFullName(user));
+// console.log("user.getFullName() :>> ", user.getFullName());
+// user.changeEmail("newmail@gmail.com");
 // console.log("user :>> ", user);
 
-// // Створити об'єкт машини (марка, модель, год, номер, цвет)
-// // Просмотреть об'єкт
-// // Изменить колір
-// // удалити св-во год випуска
-// // Добавити св-во ім'я/призвище влсника
-// // продивитися об'єкт
+// // змінити колір машини
 
 // const car = {
 //   mark: "Mersedes",
@@ -43,109 +136,58 @@
 //   year: 2022, // без лапок це цифри
 //   number: "007",
 //   color: "white",
+
+//   changeColor(newColor) {
+//     this.color = newColor;
+//   },
+//   changeValue(valName, value) {
+//     this[valName] = value;
+//   },
 // };
-// console.log("car do:>> ", car);
 
-// // Зміна значення властивості
-// car.color = "black";
-// console.log("car after:>> ", car);
-
-// delete car.year;
+// car.changeColor("yellow");
+// console.log("car :>> ", car);
+// car.changeValue("year", 2000);
 // console.log("car :>> ", car);
 
-// car.name = "Bogdan";
-// car.surname = "Hmelnickiy";
-// console.log("car :>> ", car);
-
-// /* Типи посилання і типи значення*/
-// const a = 5;
-// const b = 5;
-// console.log("a===b :>> ", a === b);
-
-// const o1 = {};
-// const o2 = {};
-// console.log("o1===o2 :>> ", o1 === o2);
-
-// const o3 = o1;
-// console.log("o1===o3 :>> ", o1 === o3);
-// o3.name = "property";
-// console.log("o1 :>> ", o1);
-
-// function f() {
-//   o3.lastName = 1;
+// // Перебор об'єкту за допомогою for in
+// // в key послідовно поміщаються значення всііх властивостей
+// for (const key in user) {
+//   console.log("key :>> ", user[key]);
 // }
 
-// f(o3);
-// console.log("o3 :>> ", o3);
+// // використати for in для car
+// // car [ім'я властивості] = значення
 
-// /* Копіювання об'єкту чогось в об'єкт*/
-// const user1 = Object.assign({}, user);
+// for (const key in car) {
+//   console.log(`Car ${key} = ${car[key]}`);
+// }
+
+// функція конструктор
+
+// function User(firstName, lastName, age) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.getFullName = function () {
+//     return `${firstName} ${lastName}`;
+//   };
+// }
+
+// const user1 = new User("Test", "Testovich", "20");
 // console.log("user1 :>> ", user1);
-// console.log("user === user1 :>> ", user === user1);
-
-// /* Копіювання об'єкту №2 - спрощенний*/
-// const user2 = { ...user };
+// const user2 = new User("user2", "user2stovich", "18");
 // console.log("user2 :>> ", user2);
-// console.log("user === user2 :>> ", user === user2);
 
-/* */
-// const prop = prompt("input property");
-// const value = prompt("input value");
-
-// const obj = {
-//   [prop]: value,
-// };
-// console.log("obj :>> ", obj);
-
-const user = {
-  // key:value,
-  firstName: "Test",
-  lastName: "Testovich",
-  email: "test@imail.com",
-  password: "qwert",
-  // методи
-  // this той, об'єкт, що стоїть перед крапкою при виклику метода
-  getFullName: function () {
-    // console.log("this :>> ", this === user);
-    // console.log("Hello from function");
-    return `${this.firstName} ${this.lastName}`;
-  },
-  // changeEmail: function (newEmail) {
-  //   this.email = newEmail;
-  // },
-  //2
-  changeEmail(newEmail) {
-    this.email = newEmail;
-  },
-};
-
-// function getFullName(user1) {
-//   return `${user1.firstName} ${user1.lastName}`;
-// }
-
-// console.log("getFullName(user) :>> ", getFullName(user));
-console.log("user.getFullName() :>> ", user.getFullName());
-user.changeEmail("newmail@gmail.com");
-console.log("user :>> ", user);
-
-// змінити колір машини
+// console.log("user1.getFullName() :>> ", user1.getFullName());
+// console.log("user2.getFullName() :>> ", user2.getFullName());
 
 const car = {
-  mark: "Mersedes",
-  model: "Brabus",
-  year: 2022, // без лапок це цифри
-  number: "007",
-  color: "white",
-
-  changeColor(newColor) {
-    this.color = newColor;
-  },
-  changeValue(valName, value) {
-    this[valName] = value;
+  model: "audi",
+  fio: {
+    firstName: "Name",
+    lastName: "Famaly",
   },
 };
 
-car.changeColor("yellow");
-console.log("car :>> ", car);
-car.changeValue("year", 2000);
 console.log("car :>> ", car);
