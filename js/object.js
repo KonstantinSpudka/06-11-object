@@ -97,33 +97,33 @@
 // // };
 // // console.log("obj :>> ", obj);
 
-// const user = {
-//   // key:value,
-//   firstName: "Test",
-//   lastName: "Testovich",
-//   email: "test@imail.com",
-//   password: "qwert",
-//   // методи
-//   // this той, об'єкт, що стоїть перед крапкою при виклику метода
-//   getFullName: function () {
-//     // console.log("this :>> ", this === user);
-//     // console.log("Hello from function");
-//     return `${this.firstName} ${this.lastName}`;
-//   },
-//   // changeEmail: function (newEmail) {
-//   //   this.email = newEmail;
-//   // },
-//   //2
-//   changeEmail(newEmail) {
-//     this.email = newEmail;
-//   },
-// };
+const user = {
+  // key:value,
+  firstName: "Test",
+  lastName: "Testovich",
+  email: "test@imail.com",
+  password: "qwert",
+  // методи
+  // this той, об'єкт, що стоїть перед крапкою при виклику метода
+  // getFullName: function () {
+  //   // console.log("this :>> ", this === user);
+  //   // console.log("Hello from function");
+  //   // return `${this.firstName} ${this.lastName}`;
+  // },
+  // // changeEmail: function (newEmail) {
+  // //   this.email = newEmail;
+  // // },
+  // //2
+  // changeEmail(newEmail) {
+  //   this.email = newEmail;
+  // },
+};
 
-// // function getFullName(user1) {
-// //   return `${user1.firstName} ${user1.lastName}`;
-// // }
+function getFullName(user1) {
+  return `${user1.firstName} ${user1.lastName}`;
+}
 
-// // console.log("getFullName(user) :>> ", getFullName(user));
+console.log("getFullName(user) :>> ", getFullName(user));
 // console.log("user.getFullName() :>> ", user.getFullName());
 // user.changeEmail("newmail@gmail.com");
 // console.log("user :>> ", user);
@@ -182,12 +182,12 @@
 // console.log("user1.getFullName() :>> ", user1.getFullName());
 // console.log("user2.getFullName() :>> ", user2.getFullName());
 
-const car = {
-  model: "audi",
-  fio: {
-    firstName: "Name",
-    lastName: "Famaly",
-  },
-};
+// const car = {
+//   model: "audi",
+//   fio: {
+//     firstName: "Name",
+//     lastName: "Famaly",
+//   },
+// };
 
-console.log("car :>> ", car);
+// console.log("car :>> ", car);
