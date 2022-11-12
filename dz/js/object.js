@@ -1,4 +1,4 @@
-//1---------------
+// 1 ---------------
 const customer = {
   firstName: "Name",
   lastName: "Surname",
@@ -35,3 +35,18 @@ console.log("customer7 :>> ", customer7);
 
 const customer8 = { ...customer };
 console.log("customer8 :>> ", customer8);
+
+// 2 --------------
+
+const cat = {
+  name: "Murka",
+  color: "black",
+  isMale: false,
+  isFurnitureDemage: true,
+};
+
+for (const key in cat) {
+  console.log("key :>> ", cat[key]);
+}
+
+// 3 ---------------
