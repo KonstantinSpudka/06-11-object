@@ -50,3 +50,13 @@ for (const key in cat) {
 }
 
 // 3 ---------------
+
+const book = {
+  autor: "Autor",
+  nameBook: "nameBook",
+  year: "1985",
+  vydavnytstvo: "Vydavnytstvo",
+  price: "1600",
+};
+
+0;
