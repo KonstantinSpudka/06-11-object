@@ -35,3 +35,19 @@ switch (operation) {
   default:
     console.log("Введіть коректне число");
 }
+
+// 2 ------------
+const day = Number(prompt("Введіть число місяця від 1 до 30"));
+switch (true) {
+  case day > 0 && day < 11:
+    console.log("Перша декада");
+    break;
+  case day > 10 && day < 21:
+    console.log("Друга декада");
+    break;
+  case day > 20 && day < 31:
+    console.log("Третя декада");
+    break;
+  default:
+    console.log("Введіть коректне число");
+}
